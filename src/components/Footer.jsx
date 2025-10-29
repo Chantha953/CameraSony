@@ -24,15 +24,15 @@ const Footer = () => {
           <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("/")}>Home</button>
           <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("about")}>About</button>
           <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("product")}>Product</button>
-          <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("gellery")}>Gellery</button>
+          <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("gallery")}>Gellery</button>
           <button className="btn text-white rounded-3 fw-medium" onMouseOver={(e)=> e.target.style.border = "1px solid white"} onMouseOut={(e)=>e.target.style.border = "1px solid transparent"} onClick={()=>navigate("contact")}>Contact</button>
         </div>
         <div className="btnSocial d-flex justify-content-between align-items-center m-auto" style={{maxWidth: "340px"}}>
-          <button className="btn text-white"><i class="p-2 border rounded-circle bg-white fs-5 fa-brands fa-instagram" style={{ color: '#d81b60' }}></i></button>
-          <button className="btn text-white"><i class="p-2 border rounded-circle bg-white fs-5 text-primary fa-brands fa-facebook"></i></button>
-          <button className="btn text-white"><i class="p-2 border rounded-circle bg-black fs-5 fa-brands fa-tiktok"></i></button>
-          <button className="btn text-white"><i class="p-2 border rounded-circle bg-white fs-5 text-danger fa-brands fa-youtube"></i></button>
-          <button className="btn text-white"><i class="p-2 border rounded-circle bg-primary fs-5 fa-brands fa-telegram"></i></button>
+          <button className="btn text-white"><i class="p-2 border rounded-circle  fs-5 fa-brands fa-instagram" ></i></button>
+          <button className="btn text-white"><i class="p-2 border rounded-circle  fs-5  fa-brands fa-facebook"></i></button>
+          <button className="btn text-white"><i class="p-2 border rounded-circle  fs-5 fa-brands fa-tiktok"></i></button>
+          <button className="btn text-white"><i class="p-2 border rounded-circle  fs-5  fa-brands fa-youtube"></i></button>
+          <button className="btn text-white"><i class="p-2 border rounded-circle  fs-5 fa-brands fa-telegram"></i></button>
         </div>
         <div style={{ opacity: "0.8", fontSize: "0.9rem" }} className="mt-4 mb-3">
           © 2025 Sony Camera Store — All Rights Reserved.

@@ -34,8 +34,7 @@ const Header = () => {
         <div className="d-flex justify-content-between align-items-center">
           <div className="logo" onClick={() => navigate("/")}>
             <p
-              className="text-white fw-bold fs-3 border px-4 rounded-5"
-              style={{backdropFilter: "blur(20px)" }}
+              className="text-white fw-bold fs-3"
             >
               SONY ✌︎︎
             </p>
@@ -113,7 +112,7 @@ const Header = () => {
               <i class="fa-solid fa-user"></i>
             </button>
             <button
-              className="btn text-white d-lg-none border rounded-5 btnMenu ms-4"
+              className="btn text-white d-xl-none border rounded-5 btnMenu ms-4"
               style={{ fontSize: "22px" }}
               onClick={handleOpen}
             >

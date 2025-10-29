@@ -21,8 +21,8 @@ const HomePage = () => {
             data-aos-duration="2000"
           >
             <h1 className="fw-bold mb-3 textSony">
-              Capture Every Moment with{" "}
-              <span className="gradient-text">SONY</span>{" "}
+              Capture Every Moment with
+              <span className="gradient-text ms-2">SONY</span>
             </h1>
             <p className="fs-5">
               Discover cutting-edge <strong>Sony cameras</strong> built for
@@ -80,14 +80,14 @@ const HomePage = () => {
       </section>
       <section>
         <div className="container product">
-          <h1 className="text-center text-white fw-bold">Products</h1>
-          <div className="row">
+          <h1 className="text-center text-white fw-bold mb-4">Products</h1>
+          <div className="row g-4">
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -115,11 +115,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -147,11 +147,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -179,11 +179,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -211,11 +211,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -243,11 +243,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -275,11 +275,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -307,11 +307,11 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white p-4"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
               data-aos="zoom-in-up"
             >
               <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100" alt="" />
+                <img src={camera} className="w-100 img-fluid" alt="" />
                 <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
                   <i class="fa-solid fa-eye"></i>
                 </button>
@@ -374,24 +374,24 @@ const HomePage = () => {
           <div className="feedback text-white text-center">
             <h1>Why Customer Love Sony</h1>
             <p className="text-white-50 fs-5">See why our customers rate us.</p>
-            <div className="btnFeedback row align-items-center m-auto">
+            <div className="btnFeedback row align-items-center justify-content-between">
               <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-                <p className="p-2 ms-3 border fw-medium rounded subBtnFeedback">
+                <p className="p-2 border fw-medium rounded subBtnFeedback">
                   Price
                 </p>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-                <p className="p-2 ms-3 border fw-medium rounded subBtnFeedback">
+                <p className="p-2 border fw-medium rounded subBtnFeedback">
                   Quality
                 </p>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-                <p className="p-2 ms-3 border fw-medium rounded subBtnFeedback">
+                <p className="p-2 border fw-medium rounded subBtnFeedback">
                   Installation
                 </p>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-3">
-                <p className="p-2 ms-3 border fw-medium rounded subBtnFeedback">
+                <p className="p-2 border fw-medium rounded subBtnFeedback">
                   Customer Service
                 </p>
               </div>
@@ -399,9 +399,7 @@ const HomePage = () => {
             <div className="row text-white mt-3">
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="800"
+                data-aos = "zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -440,9 +438,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="1200"
+                data-aos = "zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -478,9 +474,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="1600"
+                data-aos = "zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -516,9 +510,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
+                data-aos = "zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">

@@ -18,47 +18,37 @@ const AboutPage = () => {
           We bring the world of photography closer to you.
         </p>
       </section>
-
-      {/* Intro Section */}
-      <section className="row align-items-center mb-5">
+      <section className="row mb-4 g-4">
         <div
-          className="col-md-6 mb-4 mb-md-0"
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="600"
+          className="col-md-6"
+          data-aos="fade-right"
         >
-          <img
-            src={aboutCamera}
-            alt="Camera Store"
-            className="img-fluid rounded-4 border"
-          />
+          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
+            <img src={aboutCamera} alt="Camera Store" className="img-fluid" />
+          </div>
         </div>
         <div
-          className="col-md-6 border p-3 rounded-4 bg-blur"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="600"
+          className="col-md-6"
+          data-aos="fade-left"
         >
-          <p style={{ fontSize: "22px" }}>
-            At Camera Store, we’re passionate about bringing the art of
-            photography to everyone. From cutting-edge digital cameras to
-            professional lenses, tripods, and accessories — we provide only the
-            best equipment from trusted brands like Sony, Canon, Nikon, and
-            Fujifilm.
+          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
+            <p className="fs-4">
+            At Camera Store, we bring the joy of photography to everyone —
+            offering top-quality cameras, lenses, and accessories from brands
+            like Sony, Canon, Nikon, and Fujifilm.
           </p>
-          <p style={{ fontSize: "22px" }}>
-            Our goal is simple: to empower every creator — from curious
-            beginners to seasoned professionals — with the right tools to turn
-            moments into masterpieces.
+          <p className="fs-4">
+            Our mission is to empower all creators, from beginners to
+            professionals, with the right tools to capture unforgettable
+            moments.
           </p>
-          <p style={{ fontSize: "22px" }}>
-            We don’t just sell products; we deliver reliability, guidance, and
-            lifelong support for every photography journey.
+          <p className="fs-4">
+            More than a store — we’re your trusted partner in every photography
+            journey.
           </p>
+          </div>
         </div>
       </section>
-
-      {/* Mission and Vision */}
       <section className="row text-center mb-5 g-4">
         <div
           className="col-md-6"
@@ -169,8 +159,8 @@ const AboutPage = () => {
               <img
                 src={profile3}
                 alt="Team Member"
-                className="img-fluid  mb-3 rounded"
-                style={{ height: "79%" }}
+                className="img-fluid  mb-3 border rounded-4"
+                style={{ height: "79%"}}
               />
               <h5>Ethan Parker</h5>
               <p className="text-secondary">Marketing Manager</p>

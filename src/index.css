@@ -1,13 +1,13 @@
-html{
+html {
   scroll-behavior: smooth;
 }
-header{
-  --header-width : 100%;
+header {
+  --header-width: 100%;
   width: var(--header-width);
   margin: auto;
 }
 .bg-style {
-  height: 110vh;  
+  height: 110vh;
   position: fixed;
   z-index: -1;
 }
@@ -25,7 +25,7 @@ header{
   opacity: 1;
 }
 .logo {
-  width: 150px;
+  /* width: 150px; */
   cursor: pointer;
   z-index: 99;
 }
@@ -46,11 +46,6 @@ header{
   bottom: -12%;
   width: 100%;
   height: 3px;
-  /* background: linear-gradient(
-    90deg,
-    rgba(255, 0, 195, 1) 0%,
-    rgba(255, 255, 255, 1) 51%
-  ); */
   background-color: white;
   transform: scaleX(0);
   border-radius: 10px;
@@ -68,14 +63,14 @@ header .btnCart {
 header .btnCart:hover {
   scale: 1.06;
 }
-header .btnSignIn{
+header .btnSignIn {
   margin-left: 15px;
   padding: 8px 14px;
   transition: 0.2s linear;
   transform: translateY(-8px);
   backdrop-filter: blur(40px);
-  &:hover{
-    scale :1.06;
+  &:hover {
+    scale: 1.06;
   }
 }
 .loading {
@@ -106,9 +101,6 @@ header .btnSignIn{
   animation: popUp 0.4s linear;
 }
 /* For HomePgae */
-.textSony {
-  font-size: 3.8vw;
-}
 .gradient-text {
   background: linear-gradient(
     122deg,
@@ -119,127 +111,127 @@ header .btnSignIn{
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
-.btnShopNow{
+.btnShopNow {
   transition: 0.2s linear;
-  background: linear-gradient(122deg,rgba(133, 163, 255, 1) 0%, rgba(255, 0, 204, 1) 100%);
-  &:active{
+  background: linear-gradient(
+    122deg,
+    rgba(133, 163, 255, 1) 0%,
+    rgba(255, 0, 204, 1) 100%
+  );
+  &:active {
     scale: 0.9;
   }
 }
-.imgSony{
-  transition: 0.3s linear;
-}
-.mainHome:hover .imgSony{
-  transform:rotate(30deg);
-  filter: drop-shadow(2px 4px 4px white);
-  cursor:zoom-in;
-}
-.aboutSony{
+.aboutSony {
   transform: translateY(10rem);
 }
-.aboutSony .imgAboutSony:hover{
+.aboutSony .imgAboutSony:hover {
   filter: drop-shadow(0px 0px 6px gold);
 }
-.product{
+.product {
   transform: translateY(12rem);
 }
-.product .cardProduct{
+.product .cardProduct {
   overflow: hidden;
-  transition: 0.2s linear ;
+  transition: 0.2s linear;
 }
-.product .cardProduct img{
-  transition: 0.2s linear ;
+.product .cardProduct img {
+  transition: 0.2s linear;
 }
-.product .cardProduct .btnDetail{
+.product .cardProduct .btnDetail {
   top: 3%;
   right: 4%;
   opacity: 0;
   transition: 0.2s linear;
 }
-.product .cardProduct:hover{
+.product .cardProduct:hover {
   backdrop-filter: blur(30px);
 }
-.product .cardProduct:hover img{
+.product .cardProduct:hover img {
   scale: 1.03;
 }
-.product .cardProduct:hover .btnDetail{
+.product .cardProduct:hover .btnDetail {
   opacity: 1;
 }
-.product .cardProduct .btnDetail:hover::before{
+.product .cardProduct .btnDetail:hover::before {
   content: "View";
   margin-right: 4px;
 }
-.product .btnAddToCart{
+.product .btnAddToCart {
   transition: 0.1s linear;
-  background: linear-gradient(122deg,rgba(133, 163, 255, 1) 0%, rgba(255, 0, 204, 1) 100%);
-  &:active{
+  background: linear-gradient(
+    122deg,
+    rgba(133, 163, 255, 1) 0%,
+    rgba(255, 0, 204, 1) 100%
+  );
+  &:active {
     scale: 0.9;
   }
 }
-.product .btnBuy{
+.product .btnBuy {
   transition: 0.1s linear;
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.btnViewAll{
+.btnViewAll {
   backdrop-filter: blur(20px);
   transition: 0.2s linear;
-  i{
+  i {
     transition: 0.2s linear;
   }
-  &:hover i{
+  &:hover i {
     transform: translateX(5px);
   }
 }
-.Gellery{
+.Gellery {
   transform: translateY(14rem);
 }
-.contact{
+.contact {
   transform: translateY(5.8rem);
   backdrop-filter: blur(20px);
-  img{
+  img {
     transition: 0.2s ease-in-out;
   }
-  &:hover img{
+  &:hover img {
     scale: 1.02;
   }
 }
-.contact input{
+.contact input {
   display: block;
   font-weight: 400;
   font-size: 18px;
   width: 100%;
   border-bottom: 1px solid white !important;
   outline: none;
-  &:focus{
+  &:focus {
     outline: none;
     border-bottom: 1px solid white !important;
   }
 }
-.contact .messages{
+.contact .messages {
   width: 100%;
-  &::placeholder{
+  &::placeholder {
     font-size: 16px;
     color: white;
     font-weight: 300;
   }
 }
-.contact .btnSubmit{
+.contact .btnSubmit {
   transition: 0.2s linear;
-  &:hover{
+  &:hover {
     box-shadow: 0px 2px 4px white;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.contact .controlInput{
+.contact .controlInput {
   height: 100%;
 }
 .slider {
-  display: flex;              
-  gap: 1rem;                   
+  display: flex;
+  gap: 1rem;
   border-left: 3px solid white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -250,12 +242,12 @@ header .btnSignIn{
   margin: auto;
   overflow: hidden;
 }
-.slider .slide-track{
+.slider .slide-track {
   width: calc(300px * 18);
   display: flex;
   gap: 30px;
-  animation: tranformX 40s linear infinite; 
-  &:hover{
+  animation: tranformX 40s linear infinite;
+  &:hover {
     animation-play-state: paused;
   }
 }
@@ -272,16 +264,16 @@ header .btnSignIn{
   padding: 10px;
   width: 300px;
   height: 300px;
-  object-fit: cover;           
-  image-rendering: pixelated; 
+  object-fit: cover;
+  image-rendering: pixelated;
   transition: transform 1s;
-   &:hover{
+  &:hover {
     transform: translateZ(20px);
   }
 }
-.feedback{
+.feedback {
   transform: translateY(16rem);
-  .subBtnFeedback{
+  .subBtnFeedback {
     font-size: 16px;
     backdrop-filter: blur(20px);
     color: white;
@@ -292,15 +284,15 @@ header .btnSignIn{
     transition: all 0.3s ease;
   }
 }
-.cardFeedback{
+.cardFeedback {
   transition: 0.3s linear;
-  &:hover{
+  &:hover {
     backdrop-filter: blur(30px);
   }
 }
-      /* Sign in style */
+/* Sign in style */
 .signIn,
-.signUp{
+.signUp {
   width: 500px;
   backdrop-filter: blur(10px);
 }
@@ -311,37 +303,37 @@ header .btnSignIn{
 }
 .signUp .signUpEmail::placeholder,
 .signUp .signUpPassword::placeholder,
-.signUp .signUpName::placeholder{
+.signUp .signUpName::placeholder {
   color: white;
   font-weight: 300;
 }
-.SignIn .btnSignIn{
+.SignIn .btnSignIn {
   transition: 0.2s ease-in-out;
-  &:hover{
+  &:hover {
     background-color: #00b600b6;
     border: 1px solid #00b600b6 !important;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.SignUp .btnSignUp{
+.SignUp .btnSignUp {
   transition: 0.2s ease-in-out;
-  &:hover{
+  &:hover {
     background-color: #00b600b6;
     border: 1px solid #00b600b6 !important;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.fa-circle-xmark{
+.fa-circle-xmark {
   transition: 0.2s linear;
-    &:active{
-      scale: 0.7;
-    }
+  &:active {
+    scale: 0.7;
+  }
 }
-.aboutPage{
+.aboutPage {
   transform: translateY(4rem);
 }
 .gallery {
@@ -385,46 +377,88 @@ header .btnSignIn{
     }
   }
 }
-.shoppingCart{
+.shoppingCart {
   transform: translateY(6.8rem);
 }
 .hide-scrollbar {
   max-height: 80vh;
-  overflow-y: scroll;        
-  scrollbar-width: none;      
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;             
+  display: none;
 }
-.btnCheckout{
+.btnCheckout {
   transition: 0.1s linear;
-  &:hover{
+  &:hover {
     border: 1px solid #00ff007a !important;
     background-color: #00ff007a;
   }
-  &:active{
+  &:active {
     scale: 0.9;
     border: 1px solid #00ff007a !important;
     background-color: #00ff007a !important;
   }
 }
 /* Make responsive  */
-@media  screen and (max-width : 1200px) {
-  .logo{
-    text-align: center;
-    width: 220px;
-  }
-}
-@media screen and (max-width : 992px) {
-   .nav-bar {
+@media screen and (max-width: 1200px) {
+  .nav-bar {
     position: fixed;
     top: -38%;
     height: 0vh;
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: var(--header-width); 
+    width: 100%;
+    max-width: var(--header-width);
+    flex-direction: column;
+    justify-content: start !important;
+    background-color: rgba(0, 0, 0, 0.575);
+    gap: 3rem;
+    padding: 0 !important;
+    transition: 0.3s linear;
+    overflow: hidden;
+    opacity: 0;
+  }
+  .nav-bar.open {
+    height: 100vh;
+    padding: 8rem 0rem !important;
+    opacity: 1;
+  }
+  .btnMenu {
+    width: 42px;
+    height: 42px;
+    padding: 0px 0px 1px 0px;
+    /* transition: 0.2s linear; */
+    transform: translateY(-8px);
+    i {
+      transition: 0.1s linear;
+    }
+  }
+  .btnMenu:active i {
+    transform: rotateX(80deg);
+  }
+  .logo p {
+    font-size: 30px !important;
+  }
+  .btnSubmit {
+    padding: 7px !important;
+    width: 130px;
+  }
+  .iconContact button i {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-bar {
+    position: fixed;
+    top: -38%;
+    height: 0vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: var(--header-width);
     /* width: (var(--header-width)); */
     flex-direction: column;
     justify-content: start !important;
@@ -437,52 +471,43 @@ header .btnSignIn{
     overflow: hidden;
     opacity: 0;
   }
-  .nav-bar.open{
+  .nav-bar.open {
     height: 100vh;
     padding: 8rem 0rem !important;
     opacity: 1;
   }
-  .btnMenu{
+  .btnMenu {
     width: 42px;
     height: 42px;
     padding: 0px 0px 1px 0px;
     /* transition: 0.2s linear; */
     transform: translateY(-8px);
-    i{
+    i {
       transition: 0.2s linear;
     }
   }
-  .btnMenu:active i{
+  .btnMenu:active i {
     transform: rotateX(80deg);
   }
-  .logo{
-    text-align: center;
-    max-width: 30%;
+  .logo p {
+    font-size: 30px !important;
   }
-  .hide-scrollbar{
+  .hide-scrollbar {
     max-height: 100%;
   }
-  .btnSubmit{
+  .btnSubmit {
     padding: 7px !important;
     width: 130px;
   }
-  .iconContact button i{
+  .iconContact button i {
     font-size: 18px !important;
   }
 }
-@media  screen and (max-width : 512px) {
-  .btnCart{
-    position: absolute;
-    right: 35%;
-  }
-  .logo{
-    text-align: center;
-    max-width: 40%;
-  }
-  .iconContact{
+@media screen and (max-width: 512px) {
+  .iconContact {
     width: 250px;
   }
-  .btnSubmit{
+  .btnSubmit {
     padding: 7px !important;
     width: 130px;
   }
