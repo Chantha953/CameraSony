@@ -1,11 +1,17 @@
-import { useState, useContext} from "react";
+import { useState, useContext,useEffect} from "react";
 import camera from "../assets/images/camerasony.png";
 import camera1 from "../assets/images/aboutCamera.png";
 import { ProductContext } from "../context/ProductContext";
 const DetailProduct = () => {
-   const { showDetail, setShowDetail } = useContext(ProductContext);
+  const { showDetail, setShowDetail } = useContext(ProductContext);
   const [baseImage, setBaseImage] = useState(camera);
   const childImage = [camera, camera1, camera, camera1];
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <div
       className="showdetail d-flex justify-content-center align-items-center"
@@ -47,7 +53,7 @@ const DetailProduct = () => {
             <div className="col-12 col-md-6 text-white pb-4">
               <h1 className="fw-bold">Sony Alpha a7 IV</h1>
 
-              <div className="mt-4 border-top pt-3" style={{fontSize : "18px"}}>
+              <div className="mt-4 border-top pt-3 infoProduct" style={{fontSize : "18px"}}>
                 <h4>Specification</h4>
                 <div className="mt-3">
                   <div className="d-flex justify-content-between border-bottom py-2">
@@ -73,7 +79,7 @@ const DetailProduct = () => {
                 </div>
               </div>
 
-              <div className="mt-2 pt-3" style={{fontSize : "18px"}}>
+              <div className="mt-2 pt-3 infoProduct" style={{fontSize : "18px"}}>
                 <p className="mb-3">
                   <strong>Current Price :</strong> $2,000
                   <del className="text-danger ms-2">$2,200</del>

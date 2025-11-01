@@ -658,6 +658,9 @@ header .btnSignIn {
   .btnAction button{
     scale: 0.8;
   }
+  .infoProduct{
+    font-size: 15px !important;
+  }
 }
 @media screen and (max-width : 450px) {
   .closeDetail{
@@ -673,5 +676,8 @@ header .btnSignIn {
   }
   .qty{
     width: 80px !important;
+  }
+  .infoProduct{
+    font-size: 12px !important;
   }
 }
