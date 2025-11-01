@@ -1,6 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
 header {
   --header-width: 100%;
   width: var(--header-width);
@@ -401,6 +398,64 @@ header .btnSignIn {
     background-color: #00ff007a !important;
   }
 }
+.btnAction button{
+  transition: 0.2s linear;
+  &:active{
+    scale: 0.7;
+  }
+}
+.productDetail {
+  width: 80%;
+  /* max-width: 900px; */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.showdetail {
+  background-color: rgba(0, 0, 0, 0.673);
+  backdrop-filter: blur(20px);
+  width: 100vw !important;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeDetail{
+  width: max-content;
+  top: 8.3%;
+  left: 84.5% !important;
+  transition: 0.2s linear;
+  &:active{
+    scale: 0.9;
+  }
+}
+.childImage{
+  transition: 0.2s linear;
+  cursor: pointer;
+  &:active{
+    scale: 0.9;
+  }
+}
+.btnDetail button{
+ transition: 0.2s linear;
+ &:active{
+  scale: 0.9;
+ }
+}
+.qty button{
+  transition: 0.2 linear;
+  &:active{
+    scale: 0.9;
+  }
+}
+.ProductsPage{
+  transform: translateY(6rem);
+}
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
   .nav-bar {
@@ -448,6 +503,18 @@ header .btnSignIn {
   }
   .iconContact button i {
     font-size: 18px !important;
+  }
+  .closeDetail{
+   top: 8.3%;
+   left: 83% !important;
+  }
+  .baseImage{
+    width: 300px !important ;
+    height: 300px !important;
+  }
+  .childImage{
+    width: 80px;
+    height: 80px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -502,6 +569,54 @@ header .btnSignIn {
   .iconContact button i {
     font-size: 18px !important;
   }
+  .closeDetail{
+   top: 5%;
+   left: 90.2% !important;
+  }
+  .productDetail{
+    position: absolute;
+    top: 2%;
+  }
+  .showdetail{
+    overflow-y: auto;
+  }
+  .childImage{
+    width: 65px;
+    height: 65px;
+  }
+  .qty{
+    width: 90px !important;
+  }
+}
+@media screen and (max-width : 850px) {
+  .productDetail {
+    width: 95%;
+  }
+  .childImage{
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width : 770px) {
+  .closeDetail{
+   top: 3%;
+   left: 88% !important;
+  }
+  .productDetail {
+    width: 95%;
+  }
+  .childImage{
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width : 580px) {
+  .closeDetail{
+    left: 86% !important;
+  }
+  .productDetail {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 512px) {
   .iconContact {
@@ -510,5 +625,53 @@ header .btnSignIn {
   .btnSubmit {
     padding: 7px !important;
     width: 130px;
+  }
+  .closeDetail{
+    left: 84% !important;
+  }
+  .productDetail {
+    width: 95%;
+  }
+   .baseImage{
+    height: 250px !important;
+  }
+  .childImage{
+    width: 60px;
+    height: 60px;
+  }
+  .qty{
+    width: 100px !important;
+    button{
+      padding: 1px 5px !important;
+    }
+  }
+  .ImageCart{
+    width: 60px;
+    height: 60px;
+  }
+  .name-item p{
+    font-size: 14px !important;
+  }
+  .price p{
+    font-size: 18px !important;
+  }
+  .btnAction button{
+    scale: 0.8;
+  }
+}
+@media screen and (max-width : 450px) {
+  .closeDetail{
+    left: 81.8% !important;
+  }
+  .baseImage{
+    width: 230px !important;
+    height: 250px !important;
+  }
+  .ImageCart{
+    width: 50px;
+    height: 50px;
+  }
+  .qty{
+    width: 80px !important;
   }
 }

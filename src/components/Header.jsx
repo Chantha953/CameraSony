@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header
       className="position-fixed top-0"
-      style={{ transform: "translateY(20px)", zIndex: "100" }}
+      style={{ transform: "translateY(20px)", zIndex : "1" }}
       data-aos="fade-down"
       data-aos-easing="linear"
       data-aos-duration="1500"

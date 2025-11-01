@@ -1,8 +1,6 @@
 import React from "react";
 import aboutCamera from "../assets/images/aboutCamera.png";
-import profile1 from "../assets/images/profile1.png";
-import profile2 from "../assets/images/profile4.png";
-import profile3 from "../assets/images/profile5.png";
+import userimage from "../assets/images/user.png";
 import {
   faCameraRetro,
   faScrewdriverWrench,
@@ -21,17 +19,15 @@ const AboutPage = () => {
       <section className="row mb-4 g-4">
         <div
           className="col-md-6"
-          data-aos="fade-right"
         >
-          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
+          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100 m-auto d-flex justify-content-center align-items-center" data-aos = "zoom-in">
             <img src={aboutCamera} alt="Camera Store" className="img-fluid" />
           </div>
         </div>
         <div
           className="col-md-6"
-          data-aos="fade-left"
         >
-          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
+          <div className="p-4 border bg-blur rounded-4 shadow-sm h-100" data-aos = "zoom-in">
             <p className="fs-4">
             At Camera Store, we bring the joy of photography to everyone —
             offering top-quality cameras, lenses, and accessories from brands
@@ -52,9 +48,7 @@ const AboutPage = () => {
       <section className="row text-center mb-5 g-4">
         <div
           className="col-md-6"
-          data-aos="fade-right"
-          data-aos-offset="100"
-          data-aos-easing="ease-in-sine"
+          data-aos="zoom-in"
         >
           <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
             <h2 className="text-white mb-3">Our Mission</h2>
@@ -67,9 +61,7 @@ const AboutPage = () => {
         </div>
         <div
           className="col-md-6"
-          data-aos="fade-left"
-          data-aos-offset="100"
-          data-aos-easing="ease-in-sine"
+          data-aos="zoom-in"
         >
           <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
             <h2 className="text-white mb-3">Our Vision</h2>
@@ -90,7 +82,6 @@ const AboutPage = () => {
           <div
             className="col-md-4"
             data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
           >
             <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
               <FontAwesomeIcon icon={faCameraRetro} className="fs-1 mb-3" />
@@ -103,7 +94,6 @@ const AboutPage = () => {
           <div
             className="col-md-4"
             data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
           >
             <div className="p-4 border bg-blur rounded-4 shadow-sm h-100">
               <FontAwesomeIcon
@@ -136,48 +126,48 @@ const AboutPage = () => {
           Meet Our Team
         </h2>
         <div className="row g-4">
-          <div className="col-md-4" data-aos="zoom-out">
+          <div className="col-md-4">
             <div
-              className="border bg-blur p-5 rounded-4"
-              style={{ height: "500px" }}
+              className="border bg-blur p-5 rounded-4" data-aos="zoom-in"
+              style={{ height: "500px" }} 
             >
               <img
-                src={profile2}
+                src={userimage}
                 alt="Team Member"
-                className="img-fluid  mb-3 rounded"
+                className="img-fluid  mb-3 rounded-circle"
                 style={{ height: "79%" }}
               />
-              <h5>Olivia Hughes</h5>
+              <h5>Rey Chantha</h5>
               <p className="text-secondary">Founder & CEO</p>
             </div>
           </div>
-          <div className="col-md-4" data-aos="zoom-out">
+          <div className="col-md-4">
             <div
-              className="border bg-blur p-5 rounded-4"
+              className="border bg-blur p-5 rounded-4" data-aos="zoom-in"
               style={{ height: "500px" }}
             >
               <img
-                src={profile3}
+                src={userimage}
                 alt="Team Member"
-                className="img-fluid  mb-3 border rounded-4"
+                className="img-fluid  mb-3 rounded-circle"
                 style={{ height: "79%"}}
               />
-              <h5>Ethan Parker</h5>
+              <h5>Rey Chantha</h5>
               <p className="text-secondary">Marketing Manager</p>
             </div>
           </div>
-          <div className="col-md-4" data-aos="zoom-out">
+          <div className="col-md-4">
             <div
-              className="border bg-blur p-5 rounded-4"
+              className="border bg-blur p-5 rounded-4" data-aos="zoom-in"
               style={{ height: "500px" }}
             >
               <img
-                src={profile1}
+                src={userimage}
                 alt="Team Member"
-                className="img-fluid  mb-3 rounded"
+                className="img-fluid  mb-3 rounded-circle"
                 style={{ height: "79%" }}
               />
-              <h5>James Carter</h5>
+              <h5>Rey Chantha</h5>
               <p className="text-secondary">Camera Specialist</p>
             </div>
           </div>

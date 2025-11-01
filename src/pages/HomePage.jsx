@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import ProductPage from "./ProductPage";
 import { images } from "../components/SlideImages";
@@ -8,8 +7,14 @@ import Award2021 from "../assets/images/Award2021.png";
 import Award2022 from "../assets/images/Award2022.png";
 import Award2023 from "../assets/images/Award2023.png";
 import Award2024 from "../assets/images/Award2024.png";
+import userimage from "../assets/images/user.png"
+import { ProductContext } from "../context/ProductContext";
 import AboutPage from "./AboutPage";
+import CardProduct from "../components/CardProduct";
+import { useContext, useState } from "react";
+import DetailProduct from "../components/DetailProduct";
 const HomePage = () => {
+  const { showDetail, setShowDetail } = useContext(ProductContext);
   const navigate = useNavigate();
   return (
     <main>
@@ -79,266 +84,23 @@ const HomePage = () => {
         </div>
       </section>
       <section>
+        <div>
+            {showDetail&&<DetailProduct/>}
+        </div>
+      </section>
+      <section>
         <div className="container product">
           <h1 className="text-center text-white fw-bold mb-4">Products</h1>
           <div className="row g-4">
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-12 col-sm-6 col-md-4 col-lg-3 text-white"
-              data-aos="zoom-in-up"
-            >
-              <div className="border p-4 rounded-5 cardProduct position-relative">
-                <img src={camera} className="w-100 img-fluid" alt="" />
-                <button className="btn text-white border rounded-5 py-1 px-2 position-absolute btnDetail">
-                  <i class="fa-solid fa-eye"></i>
-                </button>
-                <div>
-                  <h2>Sony Camera</h2>
-                  <p className="fs-5 fw-bolder">
-                    2000$ <del className="fs-6 text-danger fw-bold">2200$</del>
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 mb-3 text-white border-0 bg-transparent py-2 btnAddToCart"
-                  >
-                    Add To Cart
-                  </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="w-100 fw-bold rounded-5 text-white bg-transparent border btnBuy py-2"
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+            <CardProduct/>
+          </div> 
           <div className="text-center mt-4">
             <button
               className="border py-1 px-4 fw-medium rounded-5 bg-transparent text-white btnViewAll"
@@ -419,7 +181,7 @@ const HomePage = () => {
                     </p>
                     <div className="d-flex align-items-center mt-3">
                       <img
-                        src="https://randomuser.me/api/portraits/women/45.jpg"
+                        src={userimage}
                         className="rounded-circle me-2"
                         width="40"
                         height="40"
@@ -457,7 +219,7 @@ const HomePage = () => {
                     </p>
                     <div className="d-flex align-items-center mt-5">
                       <img
-                        src="https://randomuser.me/api/portraits/men/23.jpg"
+                        src={userimage}
                         className="rounded-circle me-2"
                         width="40"
                         height="40"
@@ -493,7 +255,7 @@ const HomePage = () => {
                     </p>
                     <div className="d-flex align-items-center mt-5">
                       <img
-                        src="https://randomuser.me/api/portraits/women/32.jpg"
+                        src={userimage}
                         className="rounded-circle me-2"
                         width="40"
                         height="40"
@@ -529,7 +291,7 @@ const HomePage = () => {
                     </p>
                     <div className="d-flex align-items-center mt-3">
                       <img
-                        src="https://randomuser.me/api/portraits/men/50.jpg"
+                        src={userimage}
                         className="rounded-circle me-2"
                         width="40"
                         height="40"

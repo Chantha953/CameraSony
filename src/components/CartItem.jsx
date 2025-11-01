@@ -10,7 +10,7 @@ const CartItem = () => {
               alt="Product Image"
               width={"80px"}
               height={"80px"}
-              className="img-fluid"
+              className="img-fluid ImageCart"
             />
             <div className="name-item mt-2">
               <p className="fs-5 ms-2 fw-bold">Sony Camera</p>

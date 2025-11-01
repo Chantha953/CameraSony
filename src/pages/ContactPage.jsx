@@ -13,9 +13,7 @@ const ContactPage = () => {
       <div className="contact border border rounded-5">
         <div
           className="row align-items-center controlInput px-4"
-          data-aos="flip-down"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="1000"
+          data-aos = "zoom-in"
         >
           <div className="col-12 col-md-6">
             <img src={contact} alt="photo" className="img-fluid" />

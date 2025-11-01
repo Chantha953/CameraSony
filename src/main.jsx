@@ -1,7 +1,13 @@
+// main.jsx or index.jsx
 import React from "react";
-import ReactDom from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import App from "./App";
+import { ProductProvider } from "./context/ProductContext";
 
-ReactDom.createRoot(document.getElementById("root")).render(
-  <App/>
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <ProductProvider>
+      <App />
+    </ProductProvider>
+  </React.StrictMode>
+);
