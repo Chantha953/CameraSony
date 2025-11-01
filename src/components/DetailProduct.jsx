@@ -66,7 +66,7 @@ const DetailProduct = () => {
                   </div>
                   <div className="d-flex justify-content-between border-bottom py-2">
                     <span>Image Resolution</span>
-                    <span>33 Megapixels (7008 × 4672)</span>
+                    <span>33 Megapixels</span>
                   </div>
                   <div className="d-flex justify-content-between border-bottom py-2">
                     <span>Aspect Ratio</span>
