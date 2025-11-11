@@ -74,7 +74,7 @@ const SignInPage = () => {
             <Link className="me-2 text-white">Forgot Password?</Link>
           </div>
           <div className="SignIn mt-4">
-            <button className="btn btnSignIn text-white border rounded-5 w-100 fw-medium">
+            <button className="btn btnSignIn text-white border rounded-5 w-100 fw-medium" onClick={()=>navigate("/information")}>
               Sign In
             </button>
           </div>

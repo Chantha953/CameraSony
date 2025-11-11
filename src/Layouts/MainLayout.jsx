@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "./Header";
+import Header from "../components/Header";
 import { Commet } from "react-loading-indicators"; 
-import Footer from "./Footer";
-import Scroll from "./Scroll";
+import Footer from "../components/Footer";
+import Scroll from "../components/Scroll";
 
 const MainLayout = () => {
   const [loading, setLoading] = useState(false);

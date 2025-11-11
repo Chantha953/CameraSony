@@ -1,6 +1,8 @@
 import React from "react";
 import CartItem from "../components/CartItem";
+import { Outlet, useNavigate } from "react-router-dom";
 const CartPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <section>
@@ -13,7 +15,7 @@ const CartPage = () => {
             data-aos-duration="400"
           >
             <div className="col-12 col-md-8 h-100 hide-scrollbar">
-              <div className="d-flex justify-content-between align-items-center py-2">
+              <div className="d-flex justify-content-between align-items-center py-2 px-3">
                 <h2>Shopping Cart</h2>
                 <p className="text-white fs-5">
                   <span className="fw-medium">1</span> Item
@@ -33,7 +35,7 @@ const CartPage = () => {
             <div
               className="col-12 col-md-4"
             >
-              <div className="cart border h-100 p-3 rounded" style={{maxHeight: "80vh"}}>
+              <div className="cart border h-100 px-3 py-1 rounded" style={{maxHeight: "80vh"}}>
                 <h2>Order Summary</h2>
                 <div className="d-flex justify-content-between align-items-center mt-5">
                   <p>Subtotal</p>
@@ -53,7 +55,7 @@ const CartPage = () => {
                   <p className="fw-bold">1000$</p>
                 </div>
                 <div className="mt-4">
-                  <button className="btn text-white border w-100 fw-medium rounded-5 btnCheckout">
+                  <button className="btn text-white border w-100 fw-medium rounded-5 btnCheckout" onClick={()=>navigate("/checkout")}>
                     Proceed to Checkout
                   </button>
                   <div className="text-center mt-3">

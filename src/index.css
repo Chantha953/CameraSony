@@ -456,6 +456,12 @@ header .btnSignIn {
 .ProductsPage{
   transform: translateY(6rem);
 }
+.Checkout{
+  .form-control::placeholder{
+    color: white;
+    opacity: 0.8;
+  }
+}
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
   .nav-bar {

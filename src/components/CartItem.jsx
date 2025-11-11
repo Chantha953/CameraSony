@@ -3,7 +3,7 @@ import Sony from "../assets/images/camerasony.png";
 const CartItem = () => {
   return (
     <React.Fragment>
-        <div className="item d-flex justify-content-between align-items-center border px-3 rounded-4 mt-2 mb-4">
+        <div className="item d-flex justify-content-between align-items-center rounded-4 mt-2 mb-4 px-3">
           <div className="image-item d-flex justify-content-center align-items-center">
             <img
               src={Sony}
@@ -13,7 +13,7 @@ const CartItem = () => {
               className="img-fluid ImageCart"
             />
             <div className="name-item mt-2">
-              <p className="fs-5 ms-2 fw-bold">Sony Camera</p>
+              <p className="fs-5 ms-4 fw-bold">Sony Camera</p>
             </div>
           </div>
           <div
