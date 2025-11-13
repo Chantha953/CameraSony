@@ -98,13 +98,13 @@ const ContactPage = () => {
                   <p>Follow our social media</p>
                   <div style={{ transform: "translate(-16px,-14px)" }}>
                     <button className="btn text-white">
-                      <i class="p-2 border rounded-circle bg-white fs-5 text-primary fa-brands fa-facebook"></i>
+                      <i class="p-2 border rounded-circle fs-5 fa-brands fa-facebook"></i>
                     </button>
                     <button className="btn text-white">
-                      <i class="p-2 border rounded-circle bg-black fs-5 fa-brands fa-tiktok"></i>
+                      <i class="p-2 border rounded-circle fs-5 fa-brands fa-tiktok"></i>
                     </button>
                     <button className="btn text-white">
-                      <i class="p-2 border rounded-circle bg-primary fs-5 fa-brands fa-telegram"></i>
+                      <i class="p-2 border rounded-circle fs-5 fa-brands fa-telegram"></i>
                     </button>
                   </div>
                 </div>

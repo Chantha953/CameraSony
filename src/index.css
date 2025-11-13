@@ -462,6 +462,17 @@ header .btnSignIn {
     opacity: 0.8;
   }
 }
+.profilePage .btnUploadProfile{
+  transition: 0.2s linear;
+  cursor: pointer;
+  &:hover{
+    background-color: white;
+    color: black !important;
+  }
+  &:active{
+    scale: 0.9;
+  }
+}
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
   .nav-bar {
@@ -521,6 +532,12 @@ header .btnSignIn {
   .childImage{
     width: 80px;
     height: 80px;
+  }
+  .infoProfile{
+    left: 21% !important;
+  }
+  .ImgProfile{
+    width: 35% !important;
   }
 }
 @media screen and (max-width: 992px) {
@@ -593,6 +610,12 @@ header .btnSignIn {
   .qty{
     width: 90px !important;
   }
+  .ImgProfile{
+    width: 40% !important;
+  }
+  .infoProfile{
+    left: 11% !important;
+  }
 }
 @media screen and (max-width : 850px) {
   .productDetail {
@@ -615,6 +638,44 @@ header .btnSignIn {
     width: 100px;
     height: 100px;
   }
+  .ImgProfile{
+    width: 38% !important;
+  }
+  .infoProfile{
+    left: 15% !important;
+  }
+}
+@media screen and (max-width : 768px){
+  .hieghtAside{
+    height: 14vh !important;
+  }
+  .navigateInfo{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    /* padding: 8px 10px; */
+    li{
+      padding: 4px 14px;
+      margin-right: 20px !important;
+      margin-top: 0 !important;
+      cursor: pointer !important;
+      border: 1px solid white;
+      border-radius: 50px;
+      backdrop-filter: blur(40px);
+      i{
+        margin-left: 0px !important;
+      }
+    }
+  }
+  .asideNavigateInfo{
+    border: none !important;
+  }
+  .profilePage{
+    transform: translateY("0") !important;
+  }
+  
 }
 @media screen and (max-width : 580px) {
   .closeDetail{
@@ -667,6 +728,12 @@ header .btnSignIn {
   .infoProduct{
     font-size: 16px !important;
   }
+  .ImgProfile{
+    width: 42% !important;
+  }
+   .infoProfile{
+    left: 11.4% !important;
+  }
 }
 @media screen and (max-width : 450px) {
   .closeDetail{
@@ -685,5 +752,16 @@ header .btnSignIn {
   }
   .infoProduct{
     font-size: 15px !important;
+  }
+  .ImgProfile{
+    width: 50% !important;
+  }
+  .infoProfile{
+    left: 4% !important;
+  }
+}
+@media screen and (max-width : 412px){
+  .infoProfile{
+    left: 0% !important;
   }
 }

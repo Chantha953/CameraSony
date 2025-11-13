@@ -15,6 +15,7 @@ import SignUpPage from "./auth/SignUpPage";
 import GalleryPage from "./pages/GalleryPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import InfoLayout from "./Layouts/InfoLayout";
+import ProfilePage from "./pages/ProfilePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path : "information",
         element : <InfoLayout/>
+      },
+      {
+        path : "profile",
+        element : <ProfilePage/>
       }
     ],
   },
