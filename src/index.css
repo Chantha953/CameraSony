@@ -482,7 +482,7 @@ header .btnSignIn {
   }
 }
 .navigateInfo .activeAside {
-  box-shadow: 0px 0px 8px white;
+  box-shadow: 0px 0px 10px white;
 }
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
@@ -674,8 +674,11 @@ header .btnSignIn {
     }
     &:hover {
       margin: 0 !important;
-      box-shadow: 0px 0px 10px white;
+      box-shadow: 0px 0px 16px white;
     }
+  }
+  .navigateInfo .activeAside {
+    box-shadow: 0px 0px 16px white;
   }
   .asideNavigateInfo {
     border: none !important;
