@@ -31,7 +31,7 @@ const MainLayout = () => {
          </div>
         </div>
       ) : (
-        <Outlet />
+      <Outlet />
       )}
       <Footer/>
     </>

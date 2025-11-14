@@ -13,7 +13,7 @@ const ProfilePage = () => {
   return (
     <div
       className="container d-flex justify-content-center align-items-center text-center profilePage"
-      style={{ height: "70vh", transform: "translateY(1rem)" }}
+      style={{ height: "70vh"}}
     >
       <div className="text-white">
         <div className=" position-relative">

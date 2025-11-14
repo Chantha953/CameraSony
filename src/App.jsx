@@ -16,6 +16,7 @@ import GalleryPage from "./pages/GalleryPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import InfoLayout from "./Layouts/InfoLayout";
 import ProfilePage from "./pages/ProfilePage";
+import OrderPage from "./pages/OrderPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,17 +56,31 @@ const router = createBrowserRouter([
         element: <SignUpPage />,
       },
       {
-        path : "checkout",
-        element : <CheckoutPage/>
+        path: "checkout",
+        element: <CheckoutPage />,
       },
       {
-        path : "information",
-        element : <InfoLayout/>
+        path: "information",
+        element: <InfoLayout />,
+        children: [
+          {
+            index: true,
+            element: <ProfilePage />,
+          },
+          {
+            path: "profile",
+            element: <ProfilePage />,
+          },
+          {
+            path: "orders",
+            element: <OrderPage />,
+          },
+          {
+            path: "signout",
+            element: <h1>Signout Page</h1>,
+          },
+        ],
       },
-      {
-        path : "profile",
-        element : <ProfilePage/>
-      }
     ],
   },
 ]);

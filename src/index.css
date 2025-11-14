@@ -398,9 +398,9 @@ header .btnSignIn {
     background-color: #00ff007a !important;
   }
 }
-.btnAction button{
+.btnAction button {
   transition: 0.2s linear;
-  &:active{
+  &:active {
     scale: 0.7;
   }
 }
@@ -425,53 +425,64 @@ header .btnSignIn {
   align-items: center;
 }
 
-.closeDetail{
+.closeDetail {
   width: max-content;
   top: 8.3%;
   left: 84.5% !important;
   transition: 0.2s linear;
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.childImage{
+.childImage {
   transition: 0.2s linear;
   cursor: pointer;
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.btnDetail button{
- transition: 0.2s linear;
- &:active{
-  scale: 0.9;
- }
+.btnDetail button {
+  transition: 0.2s linear;
+  &:active {
+    scale: 0.9;
+  }
 }
-.qty button{
+.qty button {
   transition: 0.2 linear;
-  &:active{
+  &:active {
     scale: 0.9;
   }
 }
-.ProductsPage{
+.ProductsPage {
   transform: translateY(6rem);
 }
-.Checkout{
-  .form-control::placeholder{
+.Checkout {
+  .form-control::placeholder {
     color: white;
     opacity: 0.8;
   }
 }
-.profilePage .btnUploadProfile{
+.profilePage .btnUploadProfile {
   transition: 0.2s linear;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: white;
     color: black !important;
   }
-  &:active{
+  &:active {
     scale: 0.9;
   }
+}
+.navigateInfo .LinkNavigate {
+  padding: 6px 10px;
+  transition: 0.2s linear;
+  &:hover {
+    margin-left: 4px;
+    box-shadow: 0px 0px 10px white;
+  }
+}
+.navigateInfo .activeAside {
+  box-shadow: 0px 0px 8px white;
 }
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
@@ -521,22 +532,22 @@ header .btnSignIn {
   .iconContact button i {
     font-size: 18px !important;
   }
-  .closeDetail{
-   top: 8.3%;
-   left: 83% !important;
+  .closeDetail {
+    top: 8.3%;
+    left: 83% !important;
   }
-  .baseImage{
+  .baseImage {
     width: 300px !important ;
     height: 300px !important;
   }
-  .childImage{
+  .childImage {
     width: 80px;
     height: 80px;
   }
-  .infoProfile{
+  .infoProfile {
     left: 21% !important;
   }
-  .ImgProfile{
+  .ImgProfile {
     width: 35% !important;
   }
 }
@@ -592,93 +603,109 @@ header .btnSignIn {
   .iconContact button i {
     font-size: 18px !important;
   }
-  .closeDetail{
-   top: 5%;
-   left: 90.2% !important;
+  .closeDetail {
+    top: 5%;
+    left: 90.2% !important;
   }
-  .productDetail{
+  .productDetail {
     position: absolute;
     top: 2%;
   }
-  .showdetail{
+  .showdetail {
     overflow-y: auto;
   }
-  .childImage{
+  .childImage {
     width: 65px;
     height: 65px;
   }
-  .qty{
+  .qty {
     width: 90px !important;
   }
-  .ImgProfile{
+  .ImgProfile {
     width: 40% !important;
   }
-  .infoProfile{
+  .infoProfile {
     left: 11% !important;
   }
 }
-@media screen and (max-width : 850px) {
+@media screen and (max-width: 850px) {
   .productDetail {
     width: 95%;
   }
-  .childImage{
+  .childImage {
     width: 65px;
     height: 65px;
   }
 }
-@media screen and (max-width : 770px) {
-  .closeDetail{
-   top: 3%;
-   left: 88% !important;
+@media screen and (max-width: 770px) {
+  .closeDetail {
+    top: 3%;
+    left: 88% !important;
   }
   .productDetail {
     width: 95%;
   }
-  .childImage{
+  .childImage {
     width: 100px;
     height: 100px;
   }
-  .ImgProfile{
+  .ImgProfile {
     width: 38% !important;
   }
-  .infoProfile{
+  .infoProfile {
     left: 15% !important;
   }
-}
-@media screen and (max-width : 768px){
-  .hieghtAside{
-    height: 14vh !important;
+  .hieghtAside {
+    width: 800px;
+    height: 20vh !important;
   }
-  .navigateInfo{
-    /* border: 1px solid white; */
+  .navigateInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
-    /* padding: 8px 10px; */
-    li{
-      padding: 4px 14px;
-      margin-right: 20px !important;
-      margin-top: 0 !important;
-      cursor: pointer !important;
-      border: 1px solid white;
-      border-radius: 50px;
-      backdrop-filter: blur(40px);
-      i{
-        margin-left: 0px !important;
-      }
+    padding: 8px 10px;
+  }
+  .navigateInfo .LinkNavigate {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.375);
+    i {
+      margin: 0 !important;
+    }
+    &:hover {
+      margin: 0 !important;
+      box-shadow: 0px 0px 10px white;
     }
   }
-  .asideNavigateInfo{
+  .asideNavigateInfo {
+    border: none !important;
+    backdrop-filter: blur(0) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hieghtAside {
+    height: 30vh !important;
+  }
+  .navigateInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    padding: 8px 10px;
+  }
+  /* .navigateInfo .LinkNavigate{
+    background-color: white;
+    cursor:  pointer !important;
+  } */
+  .asideNavigateInfo {
     border: none !important;
   }
-  .profilePage{
+  /* .profilePage{
     transform: translateY("0") !important;
-  }
-  
+  } */
 }
-@media screen and (max-width : 580px) {
-  .closeDetail{
+@media screen and (max-width: 580px) {
+  .closeDetail {
     left: 86% !important;
   }
   .productDetail {
@@ -693,75 +720,75 @@ header .btnSignIn {
     padding: 7px !important;
     width: 130px;
   }
-  .closeDetail{
+  .closeDetail {
     left: 84% !important;
   }
   .productDetail {
     width: 95%;
   }
-   .baseImage{
+  .baseImage {
     height: 250px !important;
   }
-  .childImage{
+  .childImage {
     width: 60px;
     height: 60px;
   }
-  .qty{
+  .qty {
     width: 100px !important;
-    button{
+    button {
       padding: 1px 5px !important;
     }
   }
-  .ImageCart{
+  .ImageCart {
     width: 60px;
     height: 60px;
   }
-  .name-item p{
+  .name-item p {
     font-size: 14px !important;
   }
-  .price p{
+  .price p {
     font-size: 18px !important;
   }
-  .btnAction button{
+  .btnAction button {
     scale: 0.8;
   }
-  .infoProduct{
+  .infoProduct {
     font-size: 16px !important;
   }
-  .ImgProfile{
+  .ImgProfile {
     width: 42% !important;
   }
-   .infoProfile{
+  .infoProfile {
     left: 11.4% !important;
   }
 }
-@media screen and (max-width : 450px) {
-  .closeDetail{
+@media screen and (max-width: 450px) {
+  .closeDetail {
     left: 81.8% !important;
   }
-  .baseImage{
+  .baseImage {
     width: 230px !important;
     height: 250px !important;
   }
-  .ImageCart{
+  .ImageCart {
     width: 50px;
     height: 50px;
   }
-  .qty{
+  .qty {
     width: 80px !important;
   }
-  .infoProduct{
+  .infoProduct {
     font-size: 15px !important;
   }
-  .ImgProfile{
+  .ImgProfile {
     width: 50% !important;
   }
-  .infoProfile{
+  .infoProfile {
     left: 4% !important;
   }
 }
-@media screen and (max-width : 412px){
-  .infoProfile{
+@media screen and (max-width: 412px) {
+  .infoProfile {
     left: 0% !important;
   }
 }
