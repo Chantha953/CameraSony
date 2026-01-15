@@ -1,13 +1,52 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ProductContext } from "../context/ProductContext";
+import { OrbitProgress } from "react-loading-indicators";
+import Swal from "sweetalert2";
 const SignUpPage = () => {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [signOutName, setSignoutName] = useState("");
+  const [signOutEmail, setSignoutEmail] = useState("");
+  const [signOutPassword, setSignoutPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSignUp, setSignUp] = useState(true);
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    setToken,
+    isToken,
+    password,
+    setPassword,
+    setShowDetail
+  } = useContext(ProductContext);
+  setShowDetail(false);
+  useEffect(() => {
+    if (isToken) {
+      navigate("/information");
+    }
+  }, []);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    if (!signOutName || !signOutEmail || !signOutPassword || !ConfirmPassword) return;
+    if (signOutPassword !== ConfirmPassword) {
+      alert("Password not match !");
+      return;
+    } else {
+      setName(signOutName);
+      setEmail(signOutEmail);
+      setPassword(signOutPassword);
+      setSignUp(false);
+      setTimeout(() => {
+        setToken(true);
+        setSignUp(true);
+        navigate("/information");
+      }, 2500);
+    }
+  };
   return (
     <div className="container">
       <div
@@ -28,22 +67,22 @@ const SignUpPage = () => {
           <h1 className="mb-5 mt-2">Sign Up</h1>
           <div>
             <input
-              value={name}
+              value={signOutName}
               type="text"
               required
               className="form-control bg-transparent rounded-5 signUpName text-white fs-5 px-4"
               placeholder="Enter your name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setSignoutName(e.target.value)}
             />
           </div>
           <div className="position-relative mt-4">
             <input
-              value={email}
+              value={signOutEmail}
               type="email"
               required
               className="form-control bg-transparent rounded-5 signUpEmail text-white fs-5 px-4"
               placeholder="Enter your email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setSignoutEmail(e.target.value)}
             />
             <i
               class="fa-solid fa-envelope position-absolute fs-5"
@@ -52,12 +91,12 @@ const SignUpPage = () => {
           </div>
           <div className="mt-4 position-relative">
             <input
-              value={password}
+              value={signOutPassword}
               type={showPassword ? "text" : "password"}
               required
               className="form-control bg-transparent rounded-5 text-white fs-5 px-4 signUpPassword"
               placeholder="Create password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setSignoutPassword(e.target.value)}
             />
             <i
               onClick={() => setShowPassword(!showPassword)}
@@ -103,8 +142,30 @@ const SignUpPage = () => {
             </div>
           </div>
           <div className="SignUp mt-4">
-            <button className="btn btnSignUp text-white border rounded-5 w-100 fw-medium">
-              Sign Up
+            <button
+              className="btn btnSignUp text-white border rounded-5 w-100 fw-medium"
+              onClick={handleSignUp}
+            >
+              {isSignUp ? (
+                "Sign Up"
+              ) : (
+                <div
+                  style={{
+                    height: "24px",
+                    scale: "0.4",
+                    transform: "translateY(-24px)",
+                  }}
+                >
+                  <OrbitProgress
+                    variant="spokes"
+                    dense
+                    color="#ffffffff"
+                    size={16}
+                    text=""
+                    textColor=""
+                  />
+                </div>
+              )}
             </button>
           </div>
           <div className="mt-4">

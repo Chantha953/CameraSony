@@ -17,6 +17,8 @@ import CheckoutPage from "./pages/CheckoutPage";
 import InfoLayout from "./Layouts/InfoLayout";
 import ProfilePage from "./pages/ProfilePage";
 import OrderPage from "./pages/OrderPage";
+import ProtectRoute from "./routes/ProtectRoute";
+import SignOutPage from "./auth/SignOutPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,11 +59,19 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <CheckoutPage />,
+        element: (
+          <ProtectRoute>
+            <CheckoutPage />
+          </ProtectRoute>
+        ),
       },
       {
         path: "information",
-        element: <InfoLayout />,
+        element: (
+          <ProtectRoute>
+            <InfoLayout />
+          </ProtectRoute>
+        ),
         children: [
           {
             index: true,
@@ -77,7 +87,7 @@ const router = createBrowserRouter([
           },
           {
             path: "signout",
-            element: <h1>Signout Page</h1>,
+            element: <SignOutPage/>,
           },
         ],
       },

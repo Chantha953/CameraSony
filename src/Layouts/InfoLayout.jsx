@@ -25,7 +25,11 @@ const InfoLayout = () => {
                     <Link
                       to={url.link}
                       className={`text-decoration-none text-white fw-medium LinkNavigate w-100 rounded-5 ${
-                        location.pathname.includes(url.link) ? "activeAside" : ""
+                        (location.pathname === "/information" &&
+                          url.link === "profile") ||
+                        location.pathname.includes(url.link)
+                          ? "activeAside"
+                          : ""
                       }`}
                     >
                       {url.name} {url.icon}

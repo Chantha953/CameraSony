@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import imageUser from "../assets/images/user.png";
+import { ProductContext } from "../context/ProductContext";
 const ProfilePage = () => {
-  const [image,setImage] = useState(null);
-  const [defaultImage , setDefaultImage] = useState(false);
-  const handleImageChange = (e) =>{
+  const { name, email,image,setImage,setDefaultImage,defaultImage } = useContext(ProductContext);
+  const handleImageChange = (e) => {
     const file = e.target.files[0];
-    if(file){
+    if (file) {
       setImage(URL.createObjectURL(file));
       setDefaultImage(true);
     }
-  }
+  };
   return (
     <div
       className="container d-flex justify-content-center align-items-center text-center profilePage"
@@ -18,27 +18,44 @@ const ProfilePage = () => {
       <div className="text-white">
         <div className=" position-relative">
           <img
-            src={defaultImage?image:imageUser}
+            src={defaultImage ? image : imageUser}
             alt="Image"
             className="img-fluid ImgProfile rounded-circle"
             width={"200px"}
             height={"180px"}
-            style={{objectFit : "contain"}}
+            style={{ objectFit: "contain" }}
           />
           <div
             className="infoProfile border m-auto position-absolute top-50 p-5 rounded-4 bg-blur"
-            style={{ height: "340px", width : "340px", left: "-34%", zIndex: "-1" }}
+            style={{
+              height: "340px",
+              width: "340px",
+              left: "-34%",
+              zIndex: "-1",
+            }}
           >
-            <div style={{marginTop : "5rem"}}>
-              <h1 className="fw-bolder">Rey Chantha</h1>
+            <div style={{ marginTop: "5rem" }}>
+              <h1 className="fw-bolder">{name}</h1>
             </div>
             <div className="d-flex justify-content-between align-items-center mt-4">
               <p className="text-white-50">Email</p>
-              <p className="fw-medium">Reychantha@email.com</p>
+              <p className="fw-medium">{email}</p>
             </div>
             <div className="my-4">
-                <label htmlFor="uploadImage" className="form-label border py-2 px-3 rounded-5 btnUploadProfile">{defaultImage?"Change Image":"Upload Image"} <i class="fa-solid fa-arrow-up-from-bracket ms-2"></i></label>
-                <input type="file" accept="image/*" id="uploadImage" className="d-none" onChange={handleImageChange} />
+              <label
+                htmlFor="uploadImage"
+                className="form-label border py-2 px-3 rounded-5 btnUploadProfile"
+              >
+                {defaultImage ? "Change Profile" : "Upload Profile"}{" "}
+                <i class="fa-solid fa-arrow-up-from-bracket ms-2"></i>
+              </label>
+              <input
+                type="file"
+                accept="image/*"
+                id="uploadImage"
+                className="d-none"
+                onChange={handleImageChange}
+              />
             </div>
           </div>
         </div>

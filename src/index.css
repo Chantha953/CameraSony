@@ -484,6 +484,15 @@ header .btnSignIn {
 .navigateInfo .activeAside {
   box-shadow: 0px 0px 10px white;
 }
+.btnBackToShop{
+  transition: 0.1s linear;
+  &:hover{
+    box-shadow: 0px 0px 6px white;
+  }
+  &:active{
+    scale: 0.9;
+  }
+}
 /* Make responsive  */
 @media screen and (max-width: 1200px) {
   .nav-bar {

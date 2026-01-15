@@ -7,15 +7,21 @@ import Award2021 from "../assets/images/Award2021.png";
 import Award2022 from "../assets/images/Award2022.png";
 import Award2023 from "../assets/images/Award2023.png";
 import Award2024 from "../assets/images/Award2024.png";
-import userimage from "../assets/images/user.png"
+import userimage from "../assets/images/user.png";
 import { ProductContext } from "../context/ProductContext";
 import AboutPage from "./AboutPage";
 import CardProduct from "../components/CardProduct";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DetailProduct from "../components/DetailProduct";
+import data from "../data/data";
 const HomePage = () => {
-  const { showDetail, setShowDetail } = useContext(ProductContext);
   const navigate = useNavigate();
+  const { showDetail, setShowDetail } = useContext(ProductContext);
+  const [selectedId, setSelectedId] = useState(null);
+  const getProductId = (id) => {
+    setSelectedId(id);
+    setShowDetail(true);
+  };
   return (
     <main>
       <section className="container" style={{ transform: "translateY(8rem)" }}>
@@ -37,7 +43,10 @@ const HomePage = () => {
               time.
             </p>
             <div>
-              <button className="btn btnShopNow text-white text-uppercase border-0 mt-3 px-4 py-2 fw-bold" onClick={()=>navigate("product")}>
+              <button
+                className="btn btnShopNow text-white text-uppercase border-0 mt-3 px-4 py-2 fw-bold"
+                onClick={() => navigate("product")}
+              >
                 Shop now
               </button>
             </div>
@@ -67,16 +76,28 @@ const HomePage = () => {
               high-quality cameras and lenses.
             </p>
             <div className="row">
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="flip-right">
+              <div
+                className="col-12 col-sm-6 col-md-4 col-lg-3"
+                data-aos="flip-right"
+              >
                 <img src={Award2023} className="w-100 imgAboutSony" alt="" />
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="flip-right">
+              <div
+                className="col-12 col-sm-6 col-md-4 col-lg-3"
+                data-aos="flip-right"
+              >
                 <img src={Award2021} className="w-100 imgAboutSony" alt="" />
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="flip-right">
+              <div
+                className="col-12 col-sm-6 col-md-4 col-lg-3"
+                data-aos="flip-right"
+              >
                 <img src={Award2022} className="w-100 imgAboutSony" alt="" />
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="flip-right">
+              <div
+                className="col-12 col-sm-6 col-md-4 col-lg-3"
+                data-aos="flip-right"
+              >
                 <img src={Award2024} className="w-100 imgAboutSony" alt="" />
               </div>
             </div>
@@ -84,23 +105,23 @@ const HomePage = () => {
         </div>
       </section>
       <section>
-        <div>
-            {showDetail&&<DetailProduct/>}
-        </div>
+        <div>{showDetail && <DetailProduct productId={selectedId} />}</div>
       </section>
       <section>
         <div className="container product">
           <h1 className="text-center text-white fw-bold mb-4">Products</h1>
           <div className="row g-4">
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-            <CardProduct/>
-          </div> 
+            {data.map(({ image, name, price, id }) => (
+              <CardProduct
+                key={id}
+                image={image}
+                name={name}
+                price={price}
+                getId={getProductId}
+                id={id}
+              />
+            ))}
+          </div>
           <div className="text-center mt-4">
             <button
               className="border py-1 px-4 fw-medium rounded-5 bg-transparent text-white btnViewAll"
@@ -113,9 +134,9 @@ const HomePage = () => {
       </section>
       <section>
         <div className="container">
-          <div className="Gellery text-white">
+          <div className="Gellery text-white text-center">
             <h1>Moments Captured Perfectly</h1>
-            <p className="fs-4" style={{ letterSpacing: "1.5px" }}>
+            <p className="fs-5">
               Journey through our gallery of amazing photos. See how Sony
               cameras transform ordinary moments into extraordinary memories.
             </p>
@@ -161,7 +182,7 @@ const HomePage = () => {
             <div className="row text-white mt-3">
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos = "zoom-in"
+                data-aos="zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -200,7 +221,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos = "zoom-in"
+                data-aos="zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -236,7 +257,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos = "zoom-in"
+                data-aos="zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">
@@ -272,7 +293,7 @@ const HomePage = () => {
 
               <div
                 className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                data-aos = "zoom-in"
+                data-aos="zoom-in"
               >
                 <div className="border p-4 rounded-4 shadow-sm bg-transparent h-100 cardFeedback">
                   <div className="text-start text-warning mb-2">

@@ -21,7 +21,7 @@ const MainLayout = () => {
     <>
     <Scroll/>
       <Header />
-      {loading ? (
+      {/* {loading ? (
         <div
           className="d-flex justify-content-center align-items-center bg-transparent text-white"
           style={{ height: "100vh", backdropFilter : "blur(50px)", overflowY : "hidden"}}
@@ -30,9 +30,9 @@ const MainLayout = () => {
           <Commet color="#32cd32" size="medium"  text="" textColor="" />
          </div>
         </div>
-      ) : (
+      ) : ( */}
       <Outlet />
-      )}
+      {/* )} */}
       <Footer/>
     </>
   );

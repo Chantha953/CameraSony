@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CardProduct from "../components/CardProduct";
 import { ProductContext } from "../context/ProductContext";
 import DetailProduct from "../components/DetailProduct";
+import data from "../data/data";
 const ProductPage = () => {
-  const { showDetail,setShowDetail } = useContext(ProductContext);
+ const { showDetail, setShowDetail } = useContext(ProductContext);
+  const [selectedId, setSelectedId] = useState(null);
+ const getProductId = (id) => {
+    setSelectedId(id);
+    setShowDetail(true);
+  };
   return (
     <React.Fragment>
       <section>
@@ -14,24 +20,15 @@ const ProductPage = () => {
           <h1 className="text-white fw-bold">Products</h1>
           <hr className="text-white" />
           <div className="row g-4 mt-3">
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
-            <CardProduct />
+            {data.map(({image,name,price,id})=>(
+              <CardProduct key={id} image = {image} name = {name} price = {price} getId = {getProductId} id={id}/>
+            ))}
           </div>
         </div>
       </section>
       <section>
         <div>
-          {showDetail && <DetailProduct setShowDetail={setShowDetail} />}
+          {showDetail && <DetailProduct productId = {selectedId} setShowDetail={setShowDetail} />}
         </div>
       </section>
     </React.Fragment>

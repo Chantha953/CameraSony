@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ProductContext } from "../context/ProductContext";
 const Header = () => {
   const [loading, setLoading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const {countOrder} = useContext(ProductContext);
   const handleOpen = () => {
     setMenuOpen(!menuOpen);
   };
@@ -74,7 +76,7 @@ const Header = () => {
                 className={"text-decoration-none text-uppercase text-white"}
                 to={"gallery"}
               >
-                Gellery<i class="fa-regular fa-images ms-2 fs-6"></i>
+                Gallery<i class="fa-regular fa-images ms-2 fs-6"></i>
               </NavLink>
             </li>
             <li className="nav-item list-unstyled">
@@ -102,7 +104,7 @@ const Header = () => {
                   height: "30px",
                 }}
               >
-                0
+                {countOrder}
               </p>
             </button>
             <button

@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
+import { ProductContext } from "../context/ProductContext";
+import { OrbitProgress } from "react-loading-indicators";
 const SignInPage = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const { email, password, setEmail, setPassword, isToken,setToken,setShowDetail } =
+    useContext(ProductContext);
+  setShowDetail(false);
+  const [IsEmail, setIsEmail] = useState("");
+  const [isPassword, setIsPassword] = useState("");
+  const [isSignIn , setSignIn] = useState(true);
+  useEffect(() => {
+    if (isToken) {
+      navigate("/information");
+    }
+  }, [isToken,navigate]);
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    if (!IsEmail || !isPassword) return;
+    setSignIn(false);
+    if (IsEmail !== email || isPassword !== password) {
+      alert("Invalid email or password !");
+      setSignIn(true);
+      return;
+    }
+    setTimeout(()=>{
+      setSignIn(true);
+      setToken(true);
+    },2000)
+  };
   return (
     <div className="container">
       <div
@@ -25,12 +50,12 @@ const SignInPage = () => {
           <h1 className="mb-5 mt-2">Sign In</h1>
           <div className="position-relative">
             <input
-              value={email}
+              value={IsEmail}
               type="email"
               required
               className="form-control bg-transparent rounded-5 signInEmail text-white fs-5 px-4"
               placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setIsEmail(e.target.value)}
             />
             <i
               class="fa-solid fa-envelope position-absolute fs-5"
@@ -39,12 +64,12 @@ const SignInPage = () => {
           </div>
           <div className="mt-5 position-relative">
             <input
-              value={password}
+              value={isPassword}
               type={showPassword ? "text" : "password"}
               required
               className="form-control bg-transparent rounded-5 text-white fs-5 px-4 signInPassword"
               placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setIsPassword(e.target.value)}
               position-absolute
               fs-5
             />
@@ -74,8 +99,30 @@ const SignInPage = () => {
             <Link className="me-2 text-white">Forgot Password?</Link>
           </div>
           <div className="SignIn mt-4">
-            <button className="btn btnSignIn text-white border rounded-5 w-100 fw-medium" onClick={()=>navigate("/information")}>
-              Sign In
+            <button
+              className="btn btnSignIn text-white border rounded-5 w-100 fw-medium"
+              onClick={handleSignIn}
+            >
+              {isSignIn ? (
+                "Sign In"
+              ) : (
+                <div
+                  style={{
+                    height: "24px",
+                    scale: "0.4",
+                    transform: "translateY(-24px)",
+                  }}
+                >
+                  <OrbitProgress
+                    variant="spokes"
+                    dense
+                    color="#ffffffff"
+                    size={16}
+                    text=""
+                    textColor=""
+                  />
+                </div>
+              )}
             </button>
           </div>
           <div className="mt-4">
